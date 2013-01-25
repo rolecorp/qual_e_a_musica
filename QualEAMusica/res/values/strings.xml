@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Qual é a Musica?</string>
+    <string name="menu_settings">Configurações</string>
+    <string name="novojogo">Novo Jogo</string>
+    <string name="title_activity_musicas">Músicas</string>
+    <string name="letraDaMusica">Letra Da Musica</string>
+    <string name="sobreOJogo">Breve texto sobre o jogo</string>
+    <string name="desenvolvedores">Desenvolvedores</string>
+    <string name="recordes">Recordes</string>
+    <string name="sobre">Sobre</string>
+    <string name="intrucoes">Instruções</string>
+    <string name="sair">Sair</string>
+    <string name="qualeamusica">Qual é a Música?</string>
+    <string name="title_activity_instrucoes">Instruções</string>
+    <string name="intrucoesJogo">Instruções sobre o jogo</string>
+    <string name="title_activity_recordes">Recordes</string>
+    <string name="nome">Nome</string>
+    <string name="pontos">Pontos</string>
+    <string name="title_activity_respostas">Respostas</string>
+    <string name="resposta">Resposta Certa ou Errada</string>
+    <string name="pontuacao">Pontuação</string>
+    <string name="pontuacaoDaMusica">Pontuação da Música</string>
+    <string name="pontosAcumulados">Pontos Acumulados</string>
+    <string name="pontosAcumuladosNumero">100</string>
+    <string name="pontosDaMusicaNumero">10</string>
+    <string name="proximo">Próximo</string>
+    <string name="title_activity_opcoes_resposta">OpcoesResposta</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="title_activity_sobre">Sobre</string>
+    <string name="leticia">Letícia</string>
+    <string name="rodrigo">Rodrigo</string>
+    <string name="suelhy">Suelhy</string>
+    <string name="opcao">Opção</string>
+    <string name="responder">Responder</string>
+    <string name="title_activity_tocar_musica">TocarMusica</string>
+    <string name="tocar">Tocar Música</string>
+    
+
+</resources>
