@@ -2,18 +2,25 @@ package es.ufc.qualeamusica.activity;
 
 
 import es.ufc.qualeamusica.R;
-import es.ufc.qualeamusica.networking.ConectarServidor;
-import es.ufc.qualeamusica.networking.Networking;
+import es.ufc.qualeamusica.networking.EnviaRanking;
 import es.ufc.qualeamusica.util.MetodosComuns;
 import android.os.Bundle;
 import android.app.Activity;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.TabHost;
 import android.widget.TabHost.TabSpec;
 
 public class Recordes extends Activity {
 
+	private String URLinicio = "http://";
+	private String ip = "10.0.10.45";
+	private String URLmeio = ":8080/ServidorQEAM/servletJSON?nome=";
+	private String nomeUsuario = "Rodrigo";
+	private String URLfim = "&pontuacao=";
+	private double pontuacao = 12345;
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -46,10 +53,11 @@ public class Recordes extends Activity {
 		return MetodosComuns.clickItemDoMenu(featureId, item, this);
 	}
 	
-	public void conectarServidor()
-	{
-		Networking networking = new Networking();
-		ConectarServidor conectarServidor = new ConectarServidor(networking);
+	public void enviarRankingParaServidor(View v){
+		EnviaRanking enviaRanking = new EnviaRanking(this);
+		String URL = URLinicio + ip + URLmeio + nomeUsuario + URLfim + pontuacao;
+		enviaRanking.execute(new String[] { URL });
+		
 	}
 
 }
