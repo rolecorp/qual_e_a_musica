@@ -2,7 +2,8 @@
 <TabHost xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/tabHost"
     android:layout_width="fill_parent"
-    android:layout_height="fill_parent" >
+    android:layout_height="fill_parent"> 
+    
 
     <TabWidget
         android:id="@android:id/tabs"
@@ -13,7 +14,6 @@
         android:id="@android:id/tabcontent"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent" >
-
         <RelativeLayout
             android:id="@+id/Meus_Recordes"
             android:layout_width="fill_parent"
@@ -22,7 +22,7 @@
             android:paddingTop="0dp" >
 
             <TextView
-                android:id="@+id/txt1"
+                android:id="@+id/nomeTextView1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentLeft="true"
@@ -31,11 +31,11 @@
                 android:text="@string/nome" />
 
             <TextView
-                android:id="@+id/txt2"
+                android:id="@+id/pontosTextView1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignBaseline="@+id/txt1"
-                android:layout_alignBottom="@+id/txt1"
+                android:layout_alignBaseline="@+id/nomeTextView1"
+                android:layout_alignBottom="@+id/nomeTextView1"
                 android:layout_alignParentRight="true"
                 android:layout_marginRight="107dp"
                 android:text="@string/pontos" />
@@ -50,16 +50,16 @@
                 android:text="Conectar" />
 
         </RelativeLayout>
-
         <RelativeLayout
             android:id="@+id/Ranking_Geral"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:paddingTop="0dp" >
+            android:paddingTop="0dp" 
+            >
 
             <TextView
-                android:id="@+id/txt3"
+                android:id="@+id/nomeTextView2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentLeft="true"
@@ -68,15 +68,23 @@
                 android:text="@string/nome" />
 
             <TextView
-                android:id="@+id/txt4"
+                android:id="@+id/pontosTextView2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignBaseline="@+id/txt3"
-                android:layout_alignBottom="@+id/txt3"
+                android:layout_alignBaseline="@+id/nomeTextView2"
+                android:layout_alignBottom="@+id/nomeTextView2"
                 android:layout_alignParentRight="true"
                 android:layout_marginRight="107dp"
                 android:text="@string/pontos" />
-
+            
+            <Button
+                android:id="@+id/vizualizar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="500dp"
+                android:onClick="visualizarRankingGeral"
+                android:text="Vizualizar" />
         </RelativeLayout>
     </FrameLayout>
 
