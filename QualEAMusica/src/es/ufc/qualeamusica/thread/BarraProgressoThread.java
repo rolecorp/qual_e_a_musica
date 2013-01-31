@@ -1,4 +1,4 @@
-package es.ufc.quixada.thread;
+package es.ufc.qualeamusica.thread;
 
 import android.app.Activity;
 import android.content.Intent;
