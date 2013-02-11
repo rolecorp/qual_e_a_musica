@@ -5,6 +5,7 @@ import android.app.Service;
 import android.content.Context;
 import android.content.Intent;
 import android.media.MediaPlayer;
+import android.net.Uri;
 import android.os.Binder;
 import android.os.IBinder;
 import android.util.Log;
@@ -55,10 +56,13 @@ public class TocarMusicaService extends Service {
 		return START_NOT_STICKY;
 	}
 	
-	public int executar() {
+	public int executar(String nomeMusica) {
 		int duracao = 0;
 		if(!mMediaPlayer.isPlaying()) {
-			mMediaPlayer = MediaPlayer.create(this, R.raw.tulio);
+			String c = "R.raw."+nomeMusica;
+			Uri caminho = Uri.parse(c);
+			int ca = R.raw.mais_que_um_mero_poema;
+			mMediaPlayer = MediaPlayer.create(this,ca);
 			duracao = mMediaPlayer.getDuration();
 			mMediaPlayer.start();
 		}

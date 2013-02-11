@@ -23,6 +23,8 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
     }
     public static final class drawable {
         public static final int ic_launcher=0x7f020000;
+        public static final int qeam_icon=0x7f020001;
+        public static final int qeam_icone=0x7f020002;
     }
     public static final class id {
         public static final int Button01=0x7f090017;
@@ -66,11 +68,13 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static final int menu_padrao=0x7f080000;
     }
     public static final class raw {
-        public static final int tulio=0x7f040000;
+        public static final int mais_que_um_mero_poema=0x7f040000;
+        public static final int tulio=0x7f040001;
     }
     public static final class string {
         public static final int app_name=0x7f060000;
         public static final int desenvolvedores=0x7f060006;
+        public static final int escolhaOpcao=0x7f060023;
         public static final int hello_world=0x7f06001a;
         public static final int intrucoes=0x7f060009;
         public static final int intrucoesJogo=0x7f06000d;

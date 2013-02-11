@@ -1,9 +1,13 @@
 package es.ufc.qualeamusica.activity;
 
+import java.util.List;
+
 import es.ufc.qualeamusica.R;
+import es.ufc.qualeamusica.model.LetrasMusica;
 import es.ufc.qualeamusica.service.TocarMusicaService;
 import es.ufc.qualeamusica.service.TocarMusicaService.LocalBinder;
 import es.ufc.qualeamusica.thread.BarraProgressoThread;
+import es.ufc.qualeamusica.thread.RetornarLetrasMusica;
 import es.ufc.qualeamusica.util.MetodosComuns;
 import android.os.Bundle;
 import android.os.IBinder;
@@ -17,12 +21,15 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ProgressBar;
+import android.widget.TextView;
 
 public class Musicas extends Activity{
 	
 	private ProgressBar progressBar;
 	private TocarMusicaService mService;
     private boolean mBound = false;
+    private TextView letraMusica;
+    private List<LetrasMusica> letrasMusicas;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -34,9 +41,21 @@ public class Musicas extends Activity{
 		//Inicializando o Bind Service
 		Intent intent = new Intent(this, TocarMusicaService.class);
         bindService(intent, mConnection, Context.BIND_AUTO_CREATE);
+        
+        letraMusica = (TextView) findViewById(R.id.letraDaMusicaView);
+        
+        RetornarLetrasMusica letras = new RetornarLetrasMusica(this);
+		letras.execute();
 	}
 
-	
+	public List<LetrasMusica> getLetrasMusicas() {
+		return letrasMusicas;
+	}
+
+	public void setLetrasMusicas(List<LetrasMusica> letrasMusicas) {
+		this.letrasMusicas = letrasMusicas;
+	}
+
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.
@@ -50,9 +69,14 @@ public class Musicas extends Activity{
 	}
 	
 	public void tocarMusica(View v){
+		
+		//chamar o metodo random
+		
 		//Chamando o metodo executar do service
-			
-		int duracaoTotal = mService.executar();
+		
+		letraMusica.setText(letrasMusicas.get(0).getTrechoLetra());
+		
+		int duracaoTotal = mService.executar(letrasMusicas.get(0).getNomeMusica());
 		Log.d("Tempo Musica Total",""+duracaoTotal);
 		if(duracaoTotal!=0){
 			progressBar.setVisibility(ProgressBar.VISIBLE);
@@ -64,7 +88,14 @@ public class Musicas extends Activity{
 		
 	}
 	
-	
+	public TextView getLetraMusica() {
+		return letraMusica;
+	}
+
+	public void setLetraMusica(TextView letraMusica) {
+		this.letraMusica = letraMusica;
+	}
+
 	//nao entendi
 	private ServiceConnection mConnection = new ServiceConnection() {
 
@@ -80,9 +111,5 @@ public class Musicas extends Activity{
             mBound = false;
         }
     }; 
-    
-   
-    
-
 
 }

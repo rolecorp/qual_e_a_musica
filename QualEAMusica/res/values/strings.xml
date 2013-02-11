@@ -36,6 +36,7 @@
     <string name="responder">Responder</string>
     <string name="title_activity_tocar_musica">TocarMusica</string>
     <string name="tocar">Tocar Música</string>
+    <string name="escolhaOpcao">Escolha uma Opção</string>
     
 
 </resources>

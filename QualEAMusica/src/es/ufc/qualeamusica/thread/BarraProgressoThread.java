@@ -1,9 +1,9 @@
 package es.ufc.qualeamusica.thread;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.util.Log;
 import android.widget.ProgressBar;
+import es.ufc.qualeamusica.activity.Musicas;
 import es.ufc.qualeamusica.activity.OpcoesResposta;
 import es.ufc.qualeamusica.service.TocarMusicaService;
 
@@ -11,9 +11,9 @@ public class BarraProgressoThread implements Runnable {
 
 	private ProgressBar progressBar;
 	private TocarMusicaService mService;
-	private Activity musicasActivity;
+	private Musicas musicasActivity;
 	
-	 public BarraProgressoThread(ProgressBar progressBar,TocarMusicaService mService, Activity musicasActivity) {
+	 public BarraProgressoThread(ProgressBar progressBar,TocarMusicaService mService, Musicas musicasActivity) {
 		this.progressBar = progressBar;
 		this.mService = mService;
 		this.musicasActivity = musicasActivity;
@@ -35,7 +35,10 @@ public class BarraProgressoThread implements Runnable {
 	            Log.d("MUSICAS","ENTROU NO WHILE DA THREAD");
 	        }
 	        Log.d("MUSICAS","SAIU DO WHILE DA THREAD");
+	        
 	        Intent intent = new Intent(musicasActivity,OpcoesResposta.class);
+	        
+	        intent.putExtra("LetrasMusicas", musicasActivity.getLetrasMusicas().get(0));
 			musicasActivity.startActivity(intent);
 	    }
 }

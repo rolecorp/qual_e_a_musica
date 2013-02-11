@@ -2,6 +2,7 @@ package es.ufc.qualeamusica.activity;
 
 
 import es.ufc.qualeamusica.R;
+import es.ufc.qualeamusica.bancoDeDados.DatabaseHelper;
 import es.ufc.qualeamusica.util.MetodosComuns;
 import android.os.Bundle;
 import android.app.Activity;
@@ -11,11 +12,20 @@ import android.view.MenuItem;
 import android.view.View;
 
 public class TelaInicio extends Activity {
+	
+	private DatabaseHelper helper;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_tela_inicio);
+		helper = new DatabaseHelper(this);
+	}
+	
+	@Override
+	protected void onDestroy() {
+		helper.close();
+		super.onDestroy();
 	}
 
 	@Override
