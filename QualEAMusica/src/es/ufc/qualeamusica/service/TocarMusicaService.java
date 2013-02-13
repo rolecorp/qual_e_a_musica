@@ -1,6 +1,7 @@
 package es.ufc.qualeamusica.service;
 
 import es.ufc.qualeamusica.R;
+import es.ufc.qualeamusica.util.MapaDeMusicas;
 import android.app.Service;
 import android.content.Context;
 import android.content.Intent;
@@ -57,12 +58,11 @@ public class TocarMusicaService extends Service {
 	}
 	
 	public int executar(String nomeMusica) {
+		MapaDeMusicas mapa = new MapaDeMusicas();
 		int duracao = 0;
 		if(!mMediaPlayer.isPlaying()) {
-			String c = "R.raw."+nomeMusica;
-			Uri caminho = Uri.parse(c);
-			int ca = R.raw.mais_que_um_mero_poema;
-			mMediaPlayer = MediaPlayer.create(this,ca);
+			int referenciaMusica = mapa.retornarMusica(nomeMusica);
+			mMediaPlayer = MediaPlayer.create(this,referenciaMusica);
 			duracao = mMediaPlayer.getDuration();
 			mMediaPlayer.start();
 		}

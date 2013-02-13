@@ -39,6 +39,13 @@
         android:layout_below="@+id/Button03"
         android:onClick="sair"
         android:text="@string/sair" />
+    
+    <Button
+        android:id="@+id/localizacao"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="escolherOpcao"
+        android:text="Testar Localizacao" />
 
     <TextView
         android:id="@+id/textView1"

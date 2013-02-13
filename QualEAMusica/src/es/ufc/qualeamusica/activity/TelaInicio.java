@@ -59,4 +59,9 @@ public class TelaInicio extends Activity {
 	public void sair(View v){
 		this.finish();
 	}
+	
+	public void escolherOpcao(View view){
+		Intent intent = new Intent(this, Localizacao.class);
+		startActivity(intent);
+		}
 }

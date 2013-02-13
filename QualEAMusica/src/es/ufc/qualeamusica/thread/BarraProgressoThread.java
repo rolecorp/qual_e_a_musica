@@ -5,6 +5,7 @@ import android.util.Log;
 import android.widget.ProgressBar;
 import es.ufc.qualeamusica.activity.Musicas;
 import es.ufc.qualeamusica.activity.OpcoesResposta;
+import es.ufc.qualeamusica.model.LetrasMusica;
 import es.ufc.qualeamusica.service.TocarMusicaService;
 
 public class BarraProgressoThread implements Runnable {
@@ -12,10 +13,12 @@ public class BarraProgressoThread implements Runnable {
 	private ProgressBar progressBar;
 	private TocarMusicaService mService;
 	private Musicas musicasActivity;
+	private LetrasMusica musica;
 	
-	 public BarraProgressoThread(ProgressBar progressBar,TocarMusicaService mService, Musicas musicasActivity) {
+	 public BarraProgressoThread(ProgressBar progressBar,TocarMusicaService mService, LetrasMusica musica, Musicas musicasActivity) {
 		this.progressBar = progressBar;
 		this.mService = mService;
+		this.musica = musica;
 		this.musicasActivity = musicasActivity;
 	}
 
@@ -38,7 +41,7 @@ public class BarraProgressoThread implements Runnable {
 	        
 	        Intent intent = new Intent(musicasActivity,OpcoesResposta.class);
 	        
-	        intent.putExtra("LetrasMusicas", musicasActivity.getLetrasMusicas().get(0));
+	        intent.putExtra("LetrasMusicas", musica);
 			musicasActivity.startActivity(intent);
 	    }
 }

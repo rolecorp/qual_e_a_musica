@@ -1,6 +1,7 @@
 package es.ufc.qualeamusica.activity;
 
 import java.util.List;
+import java.util.Random;
 
 import es.ufc.qualeamusica.R;
 import es.ufc.qualeamusica.model.LetrasMusica;
@@ -71,18 +72,21 @@ public class Musicas extends Activity{
 	public void tocarMusica(View v){
 		
 		//chamar o metodo random
+		Random random =  new Random();
+		int aleatorio = random.nextInt(letrasMusicas.size());
+		LetrasMusica musica = letrasMusicas.remove(aleatorio);
 		
 		//Chamando o metodo executar do service
 		
-		letraMusica.setText(letrasMusicas.get(0).getTrechoLetra());
+		letraMusica.setText(musica.getTrechoLetra());
 		
-		int duracaoTotal = mService.executar(letrasMusicas.get(0).getNomeMusica());
+		int duracaoTotal = mService.executar(musica.getNomeMusica());
 		Log.d("Tempo Musica Total",""+duracaoTotal);
 		if(duracaoTotal!=0){
 			progressBar.setVisibility(ProgressBar.VISIBLE);
 			progressBar.setProgress(0);
 			progressBar.setMax(duracaoTotal);
-			BarraProgressoThread barraProgressoThread = new BarraProgressoThread(progressBar, mService, this);
+			BarraProgressoThread barraProgressoThread = new BarraProgressoThread(progressBar, mService,musica, this);
 			new Thread(barraProgressoThread).start();
 		}
 		

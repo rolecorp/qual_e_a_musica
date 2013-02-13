@@ -36,7 +36,7 @@ public class DatabaseHelper extends SQLiteOpenHelper{
 				"Por gigantes barcos","Aquilo no retrato é sangue ou óleo negro?", "É o frio que segue o rumo e com ele a sua sorte",
 				"Aqui jaz um coração", "Estraga qualquer face limpa",db);
 		
-		inserirRespostasBanco("", "", "", "", "", "", db);
+		inserirRespostasBanco("tulio", "asdfasdfadsfdfaf,llv,ds/s/asfd/sdf/df", "a", "b", "c", "d", db);
 		
 	}
 

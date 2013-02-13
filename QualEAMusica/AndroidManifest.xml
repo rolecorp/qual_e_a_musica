@@ -6,9 +6,10 @@
 
     <uses-sdk
         android:minSdkVersion="10"
-        android:targetSdkVersion="17"   />
-    
+        android:targetSdkVersion="17" />
+
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
 
     <application
         android:allowBackup="true"
@@ -17,7 +18,7 @@
         android:theme="@android:style/Theme.Wallpaper.NoTitleBar.Fullscreen" >
         <activity
             android:name="es.ufc.qualeamusica.activity.TelaInicio"
-            android:label="@string/app_name"> 
+            android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -47,6 +48,10 @@
         <activity
             android:name="es.ufc.qualeamusica.activity.OpcoesResposta"
             android:label="@string/title_activity_opcoes_resposta" >
+        </activity>
+        <activity
+            android:name="es.ufc.qualeamusica.activity.Localizacao"
+            android:label="@string/title_activity_localizacao" >
         </activity>
     </application>
 
