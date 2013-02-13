@@ -64,4 +64,5 @@ public class TelaInicio extends Activity {
 		Intent intent = new Intent(this, Localizacao.class);
 		startActivity(intent);
 		}
+	
 }

@@ -72,13 +72,17 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
     }
     public static final class menu {
         public static final int activity_localizacao=0x7f080000;
-        public static final int menu_padrao=0x7f080001;
+        public static final int activity_sensor=0x7f080001;
+        public static final int menu_padrao=0x7f080002;
     }
     public static final class raw {
         public static final int mais_que_um_mero_poema=0x7f040000;
         public static final int tulio=0x7f040001;
     }
     public static final class string {
+        public static final int acc_value1=0x7f060026;
+        public static final int acc_value2=0x7f060027;
+        public static final int acc_value3=0x7f060028;
         public static final int app_name=0x7f060000;
         public static final int desenvolvedores=0x7f060006;
         public static final int escolhaOpcao=0x7f060023;
@@ -113,6 +117,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static final int title_activity_opcoes_resposta=0x7f060019;
         public static final int title_activity_recordes=0x7f06000e;
         public static final int title_activity_respostas=0x7f060011;
+        public static final int title_activity_sensor=0x7f060025;
         public static final int title_activity_sobre=0x7f06001b;
         public static final int title_activity_tocar_musica=0x7f060021;
         public static final int tocar=0x7f060022;

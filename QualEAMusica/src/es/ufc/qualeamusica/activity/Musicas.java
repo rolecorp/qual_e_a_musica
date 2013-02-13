@@ -5,6 +5,7 @@ import java.util.Random;
 
 import es.ufc.qualeamusica.R;
 import es.ufc.qualeamusica.model.LetrasMusica;
+import es.ufc.qualeamusica.sensores.Acelerometro;
 import es.ufc.qualeamusica.service.TocarMusicaService;
 import es.ufc.qualeamusica.service.TocarMusicaService.LocalBinder;
 import es.ufc.qualeamusica.thread.BarraProgressoThread;
@@ -47,6 +48,8 @@ public class Musicas extends Activity{
         
         RetornarLetrasMusica letras = new RetornarLetrasMusica(this);
 		letras.execute();
+		
+		Acelerometro acelerometro = new Acelerometro(this);
 	}
 
 	public List<LetrasMusica> getLetrasMusicas() {
