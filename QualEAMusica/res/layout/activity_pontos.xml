@@ -1,0 +1,45 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Pontos" >
+
+    <Button
+        android:id="@+id/botaoProximo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:onClick="proximaMusica"
+        android:text="Proximo" />
+
+    <TextView
+        android:id="@+id/repostaView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="64dp"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <TextView
+        android:id="@+id/pontosView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/botaoProximo"
+        android:layout_marginBottom="32dp"
+        android:layout_marginLeft="40dp"
+        android:layout_toRightOf="@+id/botaoProximo"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/pontosView"
+        android:layout_alignBottom="@+id/pontosView"
+        android:layout_alignParentLeft="true"
+        android:text="Pontos"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+</RelativeLayout>

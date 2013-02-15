@@ -55,8 +55,8 @@
             android:label="@string/title_activity_localizacao" >
         </activity>
         <activity
-            android:name="es.ufc.qualeamusica.activity.SensorAcelerometro"
-            android:label="@string/title_activity_sensor" >
+            android:name="es.ufc.qualeamusica.activity.Pontos"
+            android:label="@string/title_activity_pontos" >
         </activity>
     </application>
 

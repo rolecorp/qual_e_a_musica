@@ -29,6 +29,8 @@ public class DatabaseHelper extends SQLiteOpenHelper{
 		
 		db.execSQL("CREATE TABLE ranking_local (_id INTEGER PRIMARY KEY autoincrement, "+
 				"nome_usuario TEXT, "+
+				"lat TEXT, "+
+				"lng TEXT, "+
 				"pontuacao DOUBLE);");
 
 		inserirRespostasBanco("mais_que_um_mero_poema","A vida segue a sina / Mães enterram filhos, filhos perdem amigos / " +
@@ -46,9 +48,7 @@ public class DatabaseHelper extends SQLiteOpenHelper{
 	}
 	
 	public void inserirRespostasBanco(String nomeMusica, String trechoLetra, String respostaCerta, String respostaErrada1, String respostaErrada2, String respostaErrada3, SQLiteDatabase db){
-//		SQLiteDatabase db = this.getWritableDatabase();
-		
-		//SQLiteDatabase db = dbh.getWritableDatabase();
+
 		
 		ContentValues values = new ContentValues();
 		values.put("nome", nomeMusica);
@@ -67,5 +67,27 @@ public class DatabaseHelper extends SQLiteOpenHelper{
 		}
 
 	}
+	
+	public void inserirRankingNoBanco(String nomeUsuario, Double pontuacao, String lat, String lng){
+		SQLiteDatabase db = this.getWritableDatabase();
+				
+		ContentValues values = new ContentValues();
+		values.put("nome_usuario", nomeUsuario);
+		values.put("lat", lat);
+		values.put("lng", lng);
+		values.put("pontuacao", pontuacao);
+		
+		
+		long resultado = db.insert("ranking_local", null , values);
+		
+		if(resultado != -1 ){
+			Log.d("inserirRespostasBanco", "Ranking salvo no banco");
+		}else{
+			Log.d("inserirRespostasBanco", "Erro ao salvar");
+		}
+
+	}
+	
+	
 
 }

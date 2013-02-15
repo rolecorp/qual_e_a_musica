@@ -44,7 +44,7 @@ public class Localizacao extends Activity {
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.
-		getMenuInflater().inflate(R.menu.activity_localizacao, menu);
+		getMenuInflater().inflate(R.menu.menu_padrao, menu);
 		return true;
 	}
 	

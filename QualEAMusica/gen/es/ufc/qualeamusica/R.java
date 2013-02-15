@@ -27,53 +27,55 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static final int qeam_icone=0x7f020002;
     }
     public static final class id {
-        public static final int Button01=0x7f09001b;
-        public static final int Button03=0x7f09001c;
-        public static final int Button04=0x7f09001d;
-        public static final int Meus_Recordes=0x7f09000e;
-        public static final int Ranking_Geral=0x7f090012;
+        public static final int Button01=0x7f09001e;
+        public static final int Button03=0x7f09001f;
+        public static final int Button04=0x7f090020;
+        public static final int Meus_Recordes=0x7f090011;
+        public static final int Ranking_Geral=0x7f090015;
+        public static final int botaoProximo=0x7f09000d;
         public static final int button1=0x7f090006;
-        public static final int button2=0x7f090018;
-        public static final int button3=0x7f090019;
-        public static final int conectar=0x7f090011;
+        public static final int button2=0x7f09001b;
+        public static final int button3=0x7f09001c;
+        public static final int conectar=0x7f090014;
         public static final int latitude=0x7f090002;
         public static final int letraDaMusicaView=0x7f090005;
-        public static final int localizacao=0x7f09001e;
+        public static final int localizacao=0x7f090021;
         public static final int longitude=0x7f090003;
         public static final int mapa=0x7f090004;
-        public static final int menu_settings=0x7f09001f;
-        public static final int nomeTextView1=0x7f09000f;
-        public static final int nomeTextView2=0x7f090013;
-        public static final int novoJogo=0x7f09001a;
+        public static final int menu_settings=0x7f090022;
+        public static final int nomeTextView1=0x7f090012;
+        public static final int nomeTextView2=0x7f090016;
+        public static final int novoJogo=0x7f09001d;
         public static final int opcaoMusica=0x7f090008;
-        public static final int pontosTextView1=0x7f090010;
-        public static final int pontosTextView2=0x7f090014;
+        public static final int pontosTextView1=0x7f090013;
+        public static final int pontosTextView2=0x7f090017;
+        public static final int pontosView=0x7f09000f;
         public static final int progressBar1=0x7f090007;
         public static final int provedor=0x7f090001;
         public static final int radioButton1=0x7f090009;
         public static final int radioButton2=0x7f09000a;
         public static final int radioButton3=0x7f09000b;
         public static final int radioButton4=0x7f09000c;
-        public static final int sobre=0x7f090020;
-        public static final int tabHost=0x7f09000d;
+        public static final int repostaView=0x7f09000e;
+        public static final int sobre=0x7f090023;
+        public static final int tabHost=0x7f090010;
         public static final int textView1=0x7f090000;
-        public static final int textView2=0x7f090017;
-        public static final int textView3=0x7f090016;
-        public static final int vizualizar=0x7f090015;
+        public static final int textView2=0x7f09001a;
+        public static final int textView3=0x7f090019;
+        public static final int vizualizar=0x7f090018;
     }
     public static final class layout {
         public static final int activity_instrucoes=0x7f030000;
         public static final int activity_localizacao=0x7f030001;
         public static final int activity_musicas=0x7f030002;
         public static final int activity_opcoes_resposta=0x7f030003;
-        public static final int activity_recordes=0x7f030004;
-        public static final int activity_sobre=0x7f030005;
-        public static final int activity_tela_inicio=0x7f030006;
+        public static final int activity_pontos=0x7f030004;
+        public static final int activity_recordes=0x7f030005;
+        public static final int activity_sobre=0x7f030006;
+        public static final int activity_tela_inicio=0x7f030007;
     }
     public static final class menu {
-        public static final int activity_localizacao=0x7f080000;
-        public static final int activity_sensor=0x7f080001;
-        public static final int menu_padrao=0x7f080002;
+        public static final int menu_padrao=0x7f080000;
     }
     public static final class raw {
         public static final int mais_que_um_mero_poema=0x7f040000;
@@ -115,6 +117,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static final int title_activity_localizacao=0x7f060024;
         public static final int title_activity_musicas=0x7f060003;
         public static final int title_activity_opcoes_resposta=0x7f060019;
+        public static final int title_activity_pontos=0x7f060029;
         public static final int title_activity_recordes=0x7f06000e;
         public static final int title_activity_respostas=0x7f060011;
         public static final int title_activity_sensor=0x7f060025;

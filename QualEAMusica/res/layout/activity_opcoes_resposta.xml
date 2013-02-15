@@ -57,6 +57,7 @@
         android:layout_alignParentLeft="true"
         android:layout_below="@+id/opcaoMusica"
         android:layout_marginTop="73dp"
+        android:onClick="responder"
         android:text="@string/responder" />
 
 </RelativeLayout>
