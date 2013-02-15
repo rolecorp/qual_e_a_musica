@@ -33,4 +33,21 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="42dp" />
 
+    <TextView
+        android:id="@+id/rodadaNome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="17dp"
+        android:text="Rodada " />
+
+    <TextView
+        android:id="@+id/rodada"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/rodadaNome"
+        android:layout_alignBottom="@+id/rodadaNome"
+        android:layout_toRightOf="@+id/rodadaNome"/>
+
 </RelativeLayout>

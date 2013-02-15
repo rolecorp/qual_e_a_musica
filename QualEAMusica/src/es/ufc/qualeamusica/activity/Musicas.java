@@ -31,7 +31,9 @@ public class Musicas extends Activity{
 	private TocarMusicaService mService;
     private boolean mBound = false;
     private TextView letraMusica;
+    private TextView rodadaView;
     private List<LetrasMusica> letrasMusicas;
+    private int rodada;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -45,11 +47,17 @@ public class Musicas extends Activity{
         bindService(intent, mConnection, Context.BIND_AUTO_CREATE);
         
         letraMusica = (TextView) findViewById(R.id.letraDaMusicaView);
+        rodadaView = (TextView) findViewById(R.id.rodada);
         
         RetornarLetrasMusica letras = new RetornarLetrasMusica(this);
 		letras.execute();
 		
+		rodada=0;
+		
+		rodadaView.setText(""+rodada);
+		
 		Acelerometro acelerometro = new Acelerometro(this);
+		
 	}
 
 	public List<LetrasMusica> getLetrasMusicas() {
@@ -65,6 +73,19 @@ public class Musicas extends Activity{
 		// Inflate the menu; this adds items to the action bar if it is present.
 		getMenuInflater().inflate(R.menu.menu_padrao, menu);
 		return true;
+	}
+	
+	@Override
+	protected void onResume() {
+		super.onResume();
+		if(rodada==2){
+			this.finish();
+		}else{
+			rodada++;
+			letraMusica.setText("Letra Da Musica");
+			rodadaView.setText(""+rodada);
+			progressBar.setProgress(0);
+		}
 	}
 	
 	@Override

@@ -74,11 +74,11 @@ public class OpcoesResposta extends Activity {
 				if(rb1.getText().equals(musica.getRespostaCerta())){
 				intent.putExtra("status", "Resposta Correta");
 				intent.putExtra("pontos", pontos);
-				startActivity(intent);
+				
 				}else{
 					intent.putExtra("status", "Resposta Errada");
 					intent.putExtra("pontos", 0);
-					startActivity(intent);
+					
 				}
 				break;
 			case R.id.radioButton2:
@@ -112,13 +112,8 @@ public class OpcoesResposta extends Activity {
 				break;
 		}
 		
-		
-
-		
-		
-		
-		//Intent intent = new Intent(this,Pontos.class);
-		
+		this.finish();
+		startActivity(intent);		
 	}
 	
 	
@@ -126,5 +121,5 @@ public class OpcoesResposta extends Activity {
 	public boolean onMenuItemSelected(int featureId, MenuItem item) {
 		return MetodosComuns.clickItemDoMenu(featureId, item, this);
 	}
-
+	
 }
